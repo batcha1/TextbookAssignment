@@ -43,7 +43,7 @@ while menu_choice !=3:
             choice = int(input())
             if choice == 1:
                 quanity = int(input("How many would you like to add to inventory?"))
-                book1.checkin(1)
+                book1.checkin(quanity)
                 print("The quanity is now 1") +str(book1.quanity)
 
         elif menu_choice == 2:
@@ -52,12 +52,13 @@ while menu_choice !=3:
             if result == 0:
                 print("The quanity in inventory is now 1") + str(book1.quanity)
             else:
-                print("You do not have enoughin inventory to remove that quanity")
+                print("You do not have enough in inventory to remove that quanity amount")
                 print("Current inventory is") + str(book1.quanity)
         elif menu_choice == 3:
             price ==float(input("What will the new price of the book be?"))
             book1.price =price
             print("The price of" + book1.title + "has been changed to" + str(book1.price))
+
 
 
 
